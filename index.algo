@@ -1,0 +1,40 @@
+ALGORITHM checkpointalgo
+VAR
+    i,nc,nv,nm:=INTEGER
+    c:=STRING
+    nc:=0
+    nm:=1
+    nv:=0
+    i:=0
+BEGIN
+read(c[i])
+WHILE (c[i]#".") DO
+
+    nc:=nc+1;
+    if (c[i]#" ")  THEN
+    nm:=nm+1;
+    END if
+    IF (c[i]in [a,e,y,o,i,u,A,E,Y,O,I,U])  THEN
+  nv:=nv+1;
+  END  IF 
+  read(a[i+1])
+      i++;
+END_WHILE
+if ((c[0]=" "))
+nm--;
+END_IF
+
+if (c[length-2=" "])
+nm=nm-1;
+END_IF
+WRITE ("the length of the sentence = "nc )
+WRITE ("the number of  words = "nm )
+WRITE ("the number of vowels= "nv )
+END
+
+
+
+
+
+
+
